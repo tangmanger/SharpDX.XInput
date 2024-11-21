@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8B1C11F-FCFC-42F4-873E-2539C45534DD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpDX.XInput</RootNamespace>
+    <AssemblyName>SharpDX.XInput</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SharpDX, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>packages\SharpDX.4.2.0\lib\net45\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyDoc.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Controller.cs" />
+    <Compile Include="Enum\BatteryDeviceType.cs" />
+    <Compile Include="Enum\BatteryLevel.cs" />
+    <Compile Include="Enum\BatteryType.cs" />
+    <Compile Include="Enum\CapabilityFlags.cs" />
+    <Compile Include="Enum\DeviceQueryType.cs" />
+    <Compile Include="Enum\DeviceSubType.cs" />
+    <Compile Include="Enum\DeviceType.cs" />
+    <Compile Include="Gamepad.cs" />
+    <Compile Include="GamepadButtonFlags.cs" />
+    <Compile Include="IXInput.cs" />
+    <Compile Include="NamespaceDoc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultCode.cs" />
+    <Compile Include="Struct\BatteryInformation.cs" />
+    <Compile Include="Struct\Capabilities.cs" />
+    <Compile Include="Struct\GamepadKeyCode.cs" />
+    <Compile Include="Struct\Keystroke.cs" />
+    <Compile Include="Struct\KeyStrokeFlags.cs" />
+    <Compile Include="Struct\State.cs" />
+    <Compile Include="Struct\UserIndex.cs" />
+    <Compile Include="Struct\Vibration.cs" />
+    <Compile Include="XInput13.cs" />
+    <Compile Include="XInput14.cs" />
+    <Compile Include="XInput910.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mapping.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
